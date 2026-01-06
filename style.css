@@ -1,15 +1,9 @@
-/* --- CSS Reset & Variables --- */
 :root {
-  /* Backgrounds */
   --bg-body: #0a0a12;
   --bg-card: rgba(255, 255, 255, 0.03);
   --bg-nav: rgba(10, 10, 18, 0.8);
-
-  /* Text Colors */
   --text-main: #ffffff;
   --text-muted: #a0a0b0;
-
-  /* Gradients & Accents */
   --accent-color: #764ba2;
   --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   --gradient-hover: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
@@ -50,7 +44,6 @@ ul {
   list-style: none;
 }
 
-/* --- Header & Navigation --- */
 header {
   position: fixed;
   top: 0;
@@ -94,15 +87,16 @@ nav {
   color: #fff;
 }
 
-/* --- Hero Section --- */
 .hero {
-  height: 100vh;
+  min-height: 60vh; 
+  padding-top: 120px;
+  padding-bottom: 2rem;
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0 1rem;
 }
 
 .hero h1 {
@@ -140,9 +134,8 @@ nav {
   background: var(--gradient-hover);
 }
 
-/* --- Sections Common --- */
 section {
-  padding: 6rem 1rem;
+  padding: 3rem 1rem; 
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -150,7 +143,7 @@ section {
 .section-title {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem; 
   font-weight: 700;
 }
 
@@ -159,31 +152,57 @@ section {
   padding-bottom: 5px;
 }
 
-/* --- Skills Section --- */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
 }
 
 .skill-item {
-  background: var(--bg-card);
-  padding: 2rem;
-  text-align: center;
-  border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  transition: 0.3s;
-  font-weight: 500;
+  text-align: left; 
+  padding: 1.5rem;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.skill-item:hover {
-  transform: translateY(-10px);
-  border-color: var(--accent-color);
-  background: rgba(118, 75, 162, 0.1);
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  gap: 1rem; 
 }
 
-/* --- Projects Section --- */
+.skill-percent {
+  color: #d6bcfa; 
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background: var(--gradient-primary);
+  border-radius: 10px;
+  width: 0; 
+  animation: fillBar 1.5s ease-out forwards;
+}
+
+@keyframes fillBar {
+  from { width: 0; }
+  to { width: var(--w); } 
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -253,7 +272,6 @@ section {
   text-decoration: underline;
 }
 
-/* --- Contact Section (UPDATED) --- */
 .contact-container {
   text-align: center;
   background: linear-gradient(
@@ -271,7 +289,7 @@ section {
 .contact-links {
   display: flex;
   justify-content: center;
-  gap: 4rem; /* Spacing between icons */
+  gap: 4rem;
   margin-top: 3rem;
   flex-wrap: wrap;
 }
@@ -310,7 +328,6 @@ section {
   color: #fff;
 }
 
-/* --- Footer --- */
 footer {
   text-align: center;
   padding: 3rem 1rem;
@@ -319,17 +336,45 @@ footer {
   font-size: 0.9rem;
 }
 
-/* --- Responsive --- */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.8rem;
-  }
-  .nav-links {
-    display: none;
-  }
-  .contact-links {
-    gap: 2rem;
-  }
+.edu-info h3 {
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.edu-info .institution {
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  font-size: 1.1rem;
+}
+
+.edu-info .duration {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.cert-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  background: rgba(118, 75, 162, 0.1);
+  border: 1px solid rgba(118, 75, 162, 0.3);
+  border-radius: 50px;
+  color: #d6bcfa; 
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.cert-link:hover {
+  background: var(--gradient-primary);
+  color: #fff;
+  border-color: transparent;
+  transform: translateX(5px);
+  text-decoration: none !important;
 }
 
 .social-link {
@@ -340,4 +385,98 @@ footer {
 .social-link i,
 .social-link span {
   pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  nav {
+    padding: 0 1rem;
+  }
+
+  .hero h1 {
+    font-size: 3.2rem;
+  }
+
+  .projects-grid {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0.8rem 1rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 100px;
+    min-height: auto;
+  }
+
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  section {
+    padding: 2.5rem 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-links {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .project-card {
+    padding: 1.8rem;
+  }
+
+  .project-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .social-link i {
+    width: 65px;
+    height: 65px;
+    font-size: 2rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
 }
