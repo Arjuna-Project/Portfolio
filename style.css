@@ -2,21 +2,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap");
 
-/* --- VARIABLES --- */
 :root {
-  --bg-body: #050505;
-  --bg-glass: rgba(255, 255, 255, 0.03);
-  --bg-glass-hover: rgba(255, 255, 255, 0.08);
-  --border-glass: rgba(255, 255, 255, 0.08);
+  /* --- COLOR PALETTE --- */
+  /* 1. Pitch Black (Backgrounds) */
+  --bg-body: #000000; 
 
-  --text-main: #ffffff;
-  --text-muted: #9ca3af;
+  /* 2. Platinum (Text & Highlights) */
+  --text-main: #E5E4E2; 
+  --text-muted: #999999; 
 
-  --primary: #8b5cf6;
-  --secondary: #d946ef;
-  --gradient-main: linear-gradient(135deg, #8b5cf6 0%, #d946ef 100%);
-  --gradient-text: linear-gradient(to right, #a78bfa, #e879f9);
+  /* 3. Taupe (Primary Accent) */
+  --primary: #8F8073;  /* A rich, earthy Taupe */
+  --secondary: #B8B0A9; /* A lighter metallic Taupe/Platinum blend */
 
+  /* --- GLASS & BORDERS --- */
+  /* Using Platinum alpha for the glass effect to look like smoked glass */
+  --bg-glass: rgba(229, 228, 226, 0.05);
+  --bg-glass-hover: rgba(143, 128, 115, 0.15); /* Taupe tint on hover */
+  --border-glass: rgba(229, 228, 226, 0.12);
+
+  /* --- GRADIENTS --- */
+  /* Smooth metallic gradient from Taupe to Platinum */
+  --gradient-main: linear-gradient(135deg, #8F8073 0%, #E5E4E2 100%);
+  
+  /* Text gradient for headers (Metallic Shine) */
+  --gradient-text: linear-gradient(to right, #B8B0A9, #FFFFFF);
+
+  /* --- LAYOUT & FONTS (Unchanged) --- */
   --max-width: 1100px;
   --font-main: "Outfit", sans-serif;
   --font-code: "Fira Code", monospace;
@@ -38,14 +50,14 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
-  background-image: radial-gradient(
+background-image: radial-gradient(
       circle at 15% 50%,
-      rgba(139, 92, 246, 0.08),
+      rgba(143, 128, 115, 0.08),
       transparent 25%
     ),
     radial-gradient(
       circle at 85% 30%,
-      rgba(217, 70, 239, 0.08),
+      rgba(229, 228, 226, 0.05),
       transparent 25%
     );
 }
@@ -109,9 +121,9 @@ nav {
   color: var(--text-muted);
 }
 .nav-links a:hover {
-  color: var(--text-main);
-  text-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+  text-shadow: 0 0 10px rgba(143, 128, 115, 0.35);
 }
+
 .menu-btn {
   display: none;
   font-size: 1.5rem;
@@ -143,28 +155,31 @@ nav {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .hero-arch-img {
   width: 340px;
   height: 440px;
   position: relative;
-  border-radius: 170px 170px 20px 20px;
   overflow: hidden;
-  border: 4px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 60px rgba(139, 92, 246, 0.2);
   transition: transform 0.5s var(--ease-smooth);
   margin-bottom: 5px;
   z-index: 1;
 }
+
 .hero-arch-img img {
   width: 100%;
   height: 100%;
+  
   object-fit: cover;
+  object-position: center bottom; 
+  
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+  
+  transition: transform 0.5s ease;
 }
-.hero-arch-img:hover {
-  transform: scale(1.02);
-  border-color: rgba(139, 92, 246, 0.4);
-}
+
 .hero-big-name {
+  margin-top: 2rem;
   font-size: 9rem;
   font-weight: 800;
   color: #fff;
@@ -178,7 +193,7 @@ nav {
   font-size: 1.5rem;
   color: var(--text-muted);
   font-weight: 500;
-  margin-top: 1rem;
+  margin-top: 2.5rem;
   margin-bottom: 2rem;
 }
 .scramble-text {
@@ -213,37 +228,37 @@ section {
   left: 0;
   width: 100%;
   height: 8px;
-  background: rgba(139, 92, 246, 0.2);
+  background: rgba(143, 128, 115, 0.25);
   z-index: -1;
   transform: skewX(-10deg);
 }
 
 /* --- ABOUT SECTION (Full Screen One-Page Fit) --- */
 #about {
-  min-height: 100vh; /* Forces the section to take up the full screen height */
+  min-height: 100vh; 
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centers everything vertically */
-  padding: 0 1.5rem; /* Remove top/bottom padding so it centers perfectly */
+  justify-content: center;
+  padding: 0 1.5rem;
 }
 
 .about-container {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem; /* Reduced gap between Text and Skills Grid */
-  max-width: 900px; /* Limits width to keep text readable and compact */
-  margin: 0 auto;   /* Centers the container horizontally */
+  gap: 1.5rem; 
+  max-width: 900px; 
+  margin: 0 auto;   
 }
 
 /* 1. Text Box */
 .about-text {
   width: 100%;
-  padding: 1.5rem 2rem; /* Tighter padding */
+  padding: 1.5rem 2rem; 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
-  font-size: 1.1em; /* Slightly smaller text to fit nicely */
+  text-align: justify;
+  font-size: 1.1em;
   color: var(--text-muted);
 }
 
@@ -261,12 +276,12 @@ section {
 .life-skills-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem; /* Compact gap */
+  gap: 1rem; 
 }
 
 .mini-card {
   text-align: center;
-  padding: 1rem 0.5rem; /* Very compact padding */
+  padding: 1rem 0.5rem; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -277,7 +292,7 @@ section {
 }
 
 .mini-card i {
-  font-size: 1.3rem; /* Smaller icons */
+  font-size: 1.3rem; 
   color: var(--secondary);
   margin-bottom: 0.4rem;
 }
@@ -300,7 +315,7 @@ section {
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   align-items: center;
-  height: 500px; /* Fixed height for animation window */
+  height: 500px; 
   width: 100%;
 }
 .arsenal-anim {
@@ -526,7 +541,6 @@ section {
   color: var(--text-muted);
 }
 
-/* --- CONTACT: COMMAND CENTER --- */
 .command-center {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -536,13 +550,14 @@ section {
     rgba(20, 20, 25, 0.9),
     rgba(5, 5, 5, 0.95)
   );
-  border: 1px solid rgba(139, 92, 246, 0.2);
+  border: 1px solid rgba(143, 128, 115, 0.3);
   border-radius: 24px;
   padding: 3rem;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
   position: relative;
   overflow: hidden;
 }
+
 .command-center::after {
   content: "";
   position: absolute;
@@ -562,22 +577,22 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(74, 222, 128, 0.1);
-  color: #4ade80;
+  background: rgba(143, 128, 115, 0.15);
+  color: var(--secondary);
+  border: 1px solid rgba(143, 128, 115, 0.3);
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 600;
-  border: 1px solid rgba(74, 222, 128, 0.2);
   margin-bottom: 1.5rem;
   width: fit-content;
 }
 .pulsing-dot {
   width: 8px;
   height: 8px;
-  background: #4ade80;
+  background: var(--secondary);
+  box-shadow: 0 0 10px rgba(229, 228, 226, 0.6);
   border-radius: 50%;
-  box-shadow: 0 0 10px #4ade80;
   animation: pulseGreen 2s infinite;
 }
 .command-left h2 {
@@ -707,8 +722,8 @@ section {
     border-color: rgba(255, 255, 255, 0.08);
   }
   50% {
-    box-shadow: 0 0 25px rgba(139, 92, 246, 0.15);
-    border-color: rgba(139, 92, 246, 0.3);
+    box-shadow: 0 0 25px rgba(143, 128, 115, 0.25);
+    border-color: rgba(143, 128, 115, 0.35);
   }
 }
 @keyframes pulseGreen {
@@ -721,8 +736,38 @@ section {
   }
 }
 
-/* --- RESPONSIVE MEDIA QUERIES --- */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
+
+  .nav-links {
+    gap: 2rem;
+  }
+
+  .hero-big-name {
+    font-size: 6rem;
+    letter-spacing: -2px;
+  }
+
+  .command-center {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2.5rem;
+  }
+
+  .command-left h2 {
+    font-size: 2.4rem;
+  }
+
+  .command-left p {
+    max-width: 100%;
+  }
+
+  .social-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
   .nav-links {
     display: none;
   }
@@ -733,113 +778,148 @@ section {
   .hero-big-name {
     font-size: 5rem;
     letter-spacing: -1px;
-    margin-top: -20px;
+    margin-top: -15px;
   }
+
   .hero-arch-img {
     width: 260px;
     height: 340px;
   }
 
-  /* About: Stack Vertical */
   #about {
-    height: auto;
+    min-height: auto;
     padding: 4rem 1.5rem;
   }
-  .about-container {
-    grid-template-columns: 1fr;
-  }
 
-  /* Arsenal: Stack Vertical */
   .arsenal-split {
     grid-template-columns: 1fr;
     height: auto;
+    gap: 2rem;
   }
+
   .arsenal-text {
     order: -1;
     margin-bottom: 2rem;
   }
+
   .scrolling-window {
-    height: 350px;
+    height: 340px;
+  }
+  .command-center {
+    padding: 2rem;
+    border-radius: 20px;
   }
 
-  /* Command Center: Stack Vertical */
-  .command-center {
-    grid-template-columns: 1fr;
-    padding: 2rem;
-    gap: 2rem;
+  .command-left {
+    text-align: center;
+    align-items: center;
   }
+
+  .status-badge {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .command-left h2 {
+    font-size: 2.1rem;
+  }
+
+  .command-left p {
+    font-size: 0.95rem;
+  }
+
   .social-grid {
     grid-template-columns: 1fr;
   }
 }
-/* --- MOBILE OPTIMIZATION (Targeting 420px & below) --- */
+
 @media (max-width: 480px) {
-  
-  /* 1. GLOBAL ADJUSTMENTS */
+
   section {
-    padding: 3rem 1rem; /* Reduce padding to save vertical space */
+    padding: 3rem 1rem;
   }
-  
+
   .section-title {
-    font-size: 2rem; /* Smaller titles */
+    font-size: 2rem;
     margin-bottom: 2.5rem;
   }
 
-  /* 2. HERO SECTION */
   .hero-big-name {
-    font-size: 13vw; /* Slightly smaller so it doesn't wrap awkwardly */
+    font-size: 13vw;
     margin-top: -10px;
   }
+
   .hero-arch-img {
-    width: 240px; /* Resize image to fit comfortably */
+    width: 240px;
     height: 320px;
   }
+
   .role {
-    font-size: 1.1rem; /* Readable text size */
-    flex-direction: column; /* Stack "I build" and the scramble text */
+    font-size: 1.1rem;
+    flex-direction: column;
     gap: 0.5rem;
   }
 
-  /* 3. ARSENAL (SKILLS) */
-  .arsenal-split {
-    height: auto;
-    gap: 1.5rem;
-  }
   .scrolling-window {
-    height: 300px; /* Shorter animation window for mobile */
-  }
-  .skill-card {
-    padding: 1rem; /* Compact cards */
-  }
-  .tech-details {
-    padding: 0; /* Remove extra padding on mobile */
+    height: 300px;
   }
 
-  /* 4. CONTACT COMMAND CENTER */
-  .command-center {
-    padding: 1.5rem; /* Maximize internal space */
-    border-radius: 16px;
-    gap: 2rem;
-  }
-  
-  .command-left h2 {
-    font-size: 2rem; /* Smaller heading */
-  }
-  
-  /* Stack Social Tiles nicely */
-  .social-grid {
-    grid-template-columns: 1fr; /* 1 column (vertical stack) */
-    gap: 0.8rem;
-  }
-  
-  .social-tile {
+  .skill-card {
     padding: 1rem;
   }
 
+  .tech-details {
+    padding: 0;
+  }
+
+  .command-center {
+    padding: 1.5rem;
+    gap: 2rem;
+    border-radius: 16px;
+  }
+
+  .command-left h2 {
+    font-size: 1.9rem;
+    line-height: 1.2;
+  }
+
+  .command-left p {
+    font-size: 0.9rem;
+  }
+
+  .social-tile {
+    padding: 1rem;
+    border-radius: 14px;
+  }
+
+  .tile-icon {
+    font-size: 1.3rem;
+  }
+
+  .value {
+    font-size: 0.9rem;
+  }
   .nav-links {
     width: 100%;
-    height: 100vh; 
+    height: 100vh;
     justify-content: center;
-    background: #050505; 
+    background: #050505;
   }
 }
+
+@media (max-width: 360px) {
+
+  .command-center {
+    padding: 1.2rem;
+  }
+
+  .command-left h2 {
+    font-size: 1.7rem;
+  }
+
+  .status-badge {
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
+}
+
