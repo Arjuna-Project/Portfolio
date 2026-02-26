@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -18,9 +18,7 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Work</a></li>
-          <li><a href="#certifications">Certifications & Intern</a></li>
-          <li><a href="./assets/Resume2.pdf" target="_blank">Resume</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="menu-btn"><i class="fas fa-bars"></i></div>
@@ -38,81 +36,324 @@
     </section>
 
     <section id="about">
-      <h2 class="section-title hidden-up">About <span class="highlight">Me</span></h2>
-      <div class="about-container hidden-up">
-        
-        <div class="about-text glass-card">
-          <p>
-    Hello! I’m <strong>Arjuna S</strong> from <strong>Coimbatore</strong>. I am a technology student with a 
-    strong interest in <strong>Software Development, Web Technologies, and IoT</strong>. 
-    I enjoy understanding how systems work and building practical, scalable solutions.</p>
-    
-    <p>I completed my <strong>Diploma at PSG Polytechnic College</strong>, where I gained a strong foundation in 
-    networking concepts such as <strong>WAN, LAN, the OSI Model, and TCP/IP</strong>. 
-    During my studies, I also developed programming skills in <strong>C, Java, and MySQL</strong>.</p>
-    
-    <p>Along with academics, I have hands-on experience in <strong>Frontend and Backend Development</strong> 
-    and have worked on product-oriented projects that improved my problem-solving and workplace readiness. 
-    I have also authored a research paper for <strong>IJSREM 2025</strong> focused on IoT-driven sustainability 
-    and recently attended <strong>JavaFest 2025</strong> at Infosys, Bangalore, to expand my industry exposure.</p>
-    
-    <p>Beyond tech, I have also acquired life skills such as teamwork, adaptability, and continuous learning. 
-    I enjoy participating in product-building challenges, exploring real-world workflows, and improving my 
-    professional skills. In my free time, I enjoy <strong>cooking</strong> and <strong>travelling</strong>, 
-    which help me stay creative and balanced.</p>
-  </p>
+      <h2 class="section-title hidden-up">
+        About <span class="highlight">Me</span>
+      </h2>
+
+      <div class="about-grid hidden-up">
+        <!-- A: Intro card — text only, tall left -->
+        <div class="ag-card ag-intro glass-card">
+          <p class="ag-eyebrow">
+            <i class="fas fa-map-marker-alt"></i> Coimbatore, India
+          </p>
+          <h3>Hello, I'm<br /><span class="highlight">Arjuna S</span></h3>
+          <p class="ag-body">
+            A technology student passionate about
+            <strong>Software Development, Web Technologies, and IoT</strong>. I
+            enjoy understanding how systems work and building practical,
+            scalable solutions.
+          </p>
+          <div class="ag-tags">
+            <span><i class="fas fa-code"></i> Web Dev</span>
+            <span><i class="fas fa-wifi"></i> IoT</span>
+            <span><i class="fas fa-server"></i> Backend</span>
+          </div>
         </div>
-        
-        <div class="life-skills-grid">
-          <div class="glass-card mini-card">
-            <i class="fas fa-utensils"></i>
-            <h4>Culinary</h4>
-            <small>Creativity</small>
+
+        <!-- B: Profile photo -->
+        <div class="ag-card ag-photo">
+          <img src="./assets/cbe.png" alt="Arjuna S" />
+          <div class="ag-caption">
+            <strong>Arjuna S</strong><span>Coimbatore, India</span>
           </div>
-          <div class="glass-card mini-card">
-            <i class="fas fa-search"></i>
-            <h4>Research</h4>
-            <small>Solving</small>
+        </div>
+
+        <!-- C: College photo -->
+        <div class="ag-card ag-college">
+          <img src="./assets/college.webp" alt="PSG Polytechnic College" />
+          <div class="ag-caption">
+            <strong>PSG Polytechnic College</strong
+            ><span>Diploma · Computer Engineering</span>
           </div>
-          <div class="glass-card mini-card">
-            <i class="fas fa-users"></i>
-            <h4>Teamwork</h4>
-            <small>Collab</small>
+        </div>
+
+        <!-- D: Education text -->
+        <div class="ag-card ag-edu glass-card">
+          <p class="ag-eyebrow">
+            <i class="fas fa-graduation-cap"></i> Education
+          </p>
+          <h4>Diploma at <span class="highlight">PSG Polytechnic</span></h4>
+          <p class="ag-body">
+            Strong foundation in <strong>WAN, LAN, OSI Model & TCP/IP</strong>.
+            Programming in <strong>C, Java & MySQL</strong>.
+          </p>
+          <div class="ag-stats">
+            <div class="ag-stat"><b>WAN/LAN</b><small>Networking</small></div>
+            <div class="ag-stat"><b>OSI/TCP</b><small>Protocols</small></div>
+            <div class="ag-stat"><b>C · Java</b><small>Languages</small></div>
           </div>
-          <div class="glass-card mini-card">
-            <i class="fas fa-sync-alt"></i>
-            <h4>Adapt</h4>
-            <small>Learning</small>
+        </div>
+
+        <!-- E: Networking photo -->
+        <div class="ag-card ag-networking">
+          <img src="./assets/net.jpg" alt="IoT & Networking" />
+          <div class="ag-caption">
+            <strong>IoT & Networking</strong
+            ><span>WAN · LAN · OSI · TCP/IP</span>
+          </div>
+        </div>
+
+        <!-- F: Web dev photo -->
+        <div class="ag-card ag-webdev">
+          <img src="./assets/developer.jpeg" alt="Web Development" />
+          <div class="ag-caption">
+            <strong>Full-Stack Development</strong
+            ><span>HTML · CSS · JS · FastAPI</span>
+          </div>
+        </div>
+
+        <!-- G: Research — image + text stacked, no wasted space -->
+        <div class="ag-card ag-research glass-card">
+          <div class="ag-inner-text">
+            <p class="ag-eyebrow">
+              <i class="fas fa-flask"></i> Research & Industry
+            </p>
+            <h4>Beyond the <span class="highlight">Classroom</span></h4>
+            <p class="ag-body">
+              Authored an <strong>IJSREM 2025</strong> paper on IoT-driven water
+              sustainability. Attended <strong>JavaFest 2025</strong> at
+              Infosys, Bangalore.
+            </p>
+            <a
+              href="https://ijsrem.com/download/iot-driven-water-management-solution-for-sustainable-development-in-residential-areas/"
+              target="_blank"
+              class="ag-link"
+              ><i class="fas fa-arrow-right"></i> Read Paper</a
+            >
+          </div>
+        </div>
+
+        <!-- H: Certificate photo -->
+        <div
+          class="ag-card ag-cert"
+          onclick="
+            document.getElementById('cert-modal').classList.add('active')
+          "
+        >
+          <img
+            src="./assets/e- Certificate IJSREM MrArjuna S.png"
+            alt="IJSREM Certificate"
+          />
+          <div class="ag-cert-pill">
+            <i class="fas fa-certificate"></i> Publication
+          </div>
+          <div class="ag-caption">
+            <strong>IJSREM Certificate</strong
+            ><span>IF 8.586 · Click to expand</span>
+          </div>
+        </div>
+
+        <!-- I: Academy photo -->
+        <div class="ag-card ag-academy">
+          <img src="./assets/group.jpg" alt="Freshworks Academy" />
+          <div class="ag-caption">
+            <strong>Freshworks Academy</strong
+            ><span>Teamwork · Innovation · Growth</span>
+          </div>
+        </div>
+
+        <!-- J: EF SET English Certificate image -->
+        <div
+          class="ag-card ag-efset"
+          onclick="
+            document.getElementById('efset-modal').classList.add('active')
+          "
+        >
+          <img src="./assets/English.png" alt="EF SET English Certificate" />
+          <div class="ag-cert-pill">
+            <i class="fas fa-language"></i> English B2
+          </div>
+          <div class="ag-caption">
+            <strong>EF SET Certificate</strong
+            ><span>57/100 · B2 Upper Intermediate · Dec 2025</span>
+          </div>
+        </div>
+
+        <!-- K: Squad / Activities photo -->
+        <div class="ag-card ag-squad">
+          <img src="./assets/Squad.jpg" alt="Code Casters — Squad" />
+          <div class="ag-caption">
+            <strong>Code Casters Squad</strong
+            ><span>Product Building · MugMate Presentation · Freshworks</span>
+          </div>
+        </div>
+
+        <!-- L: Life skills — activities text card -->
+        <div class="ag-card ag-skills glass-card">
+          <p class="ag-eyebrow">
+            <i class="fas fa-star"></i> Life & Activities
+          </p>
+          <p class="ag-body" style="font-size: 0.82rem">
+            Product building challenges, squad presentations, workplace study
+            sessions at <strong>Freshworks Academy</strong> — and beyond code:
+            <strong>cooking</strong> and <strong>travelling</strong> keep me
+            creative and balanced.
+          </p>
+          <div class="ag-skills-grid" style="margin-top: 4px">
+            <div class="ag-skill">
+              <i class="fas fa-laptop-code"></i><span>Product Build</span>
+            </div>
+            <div class="ag-skill">
+              <i class="fas fa-users"></i><span>Squad Work</span>
+            </div>
+            <div class="ag-skill">
+              <i class="fas fa-utensils"></i><span>Culinary</span>
+            </div>
+            <div class="ag-skill">
+              <i class="fas fa-plane"></i><span>Travel</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
-
     <section id="skills">
-      <h2 class="section-title hidden-up">My <span class="highlight">Skills</span></h2>
-      
+      <h2 class="section-title hidden-up">
+        My <span class="highlight">Skills</span>
+      </h2>
+
       <div class="arsenal-split">
-        
         <div class="arsenal-anim hidden-left">
           <div class="scrolling-window">
             <div class="scrolling-track">
               <div class="skill-group">
-                <div class="skill-card glass-card"><div class="skill-header"><i class="fab fa-html5 skill-icon"></i><span class="percent">90%</span></div><h3>HTML</h3><div class="progress-bar"><div class="fill" style="width: 90%"></div></div></div>
-                <div class="skill-card glass-card"><div class="skill-header"><i class="fab fa-css3-alt skill-icon"></i><span class="percent">85%</span></div><h3>CSS</h3><div class="progress-bar"><div class="fill" style="width: 85%"></div></div></div>
-                <div class="skill-card glass-card"><div class="skill-header"><i class="fab fa-js skill-icon"></i><span class="percent">60%</span></div><h3>JavaScript</h3><div class="progress-bar"><div class="fill" style="width: 60%"></div></div></div>
-                <div class="skill-card glass-card"><div class="skill-header"><i class="fab fa-python skill-icon"></i><span class="percent">70%</span></div><h3>Python</h3><div class="progress-bar"><div class="fill" style="width: 70%"></div></div></div>
-                <div class="skill-card glass-card"><div class="skill-header"><i class="fa-brands fa-java skill-icon"></i><span class="percent">50%</span></div><h3>Java</h3><div class="progress-bar"><div class="fill" style="width: 50%"></div></div></div>
-                <div class="skill-card glass-card"><div class="skill-header"><i class="fa-solid fa-network-wired skill-icon"></i><span class="percent">90%</span></div><h3>Networking</h3><div class="progress-bar"><div class="fill" style="width: 90%"></div></div></div>
-                <div class="skill-card glass-card"><div class="skill-header"><i class="fas fa-server skill-icon"></i><span class="percent">80%</span></div><h3>FastAPI</h3><div class="progress-bar"><div class="fill" style="width: 80%"></div></div></div>
+                <div class="skill-card glass-card">
+                  <div class="skill-header">
+                    <i class="fab fa-html5 skill-icon"></i>
+                  </div>
+                  <h3>HTML</h3>
+                  <div class="progress-bar">
+                    <div class="fill" style="width: 90%"></div>
+                  </div>
+                </div>
+                <div class="skill-card glass-card">
+                  <div class="skill-header">
+                    <i class="fab fa-css3-alt skill-icon"></i>
+                  </div>
+                  <h3>CSS</h3>
+                  <div class="progress-bar">
+                    <div class="fill" style="width: 85%"></div>
+                  </div>
+                </div>
+                <div class="skill-card glass-card">
+                  <div class="skill-header">
+                    <i class="fab fa-js skill-icon"></i>
+                  </div>
+                  <h3>JavaScript</h3>
+                  <div class="progress-bar">
+                    <div class="fill" style="width: 60%"></div>
+                  </div>
+                </div>
+                <div class="skill-card glass-card">
+                  <div class="skill-header">
+                    <i class="fab fa-python skill-icon"></i>
+                  </div>
+                  <h3>Python</h3>
+                  <div class="progress-bar">
+                    <div class="fill" style="width: 70%"></div>
+                  </div>
+                </div>
+                <div class="skill-card glass-card">
+                  <div class="skill-header">
+                    <i class="fa-brands fa-java skill-icon"></i>
+                  </div>
+                  <h3>Java</h3>
+                  <div class="progress-bar">
+                    <div class="fill" style="width: 50%"></div>
+                  </div>
+                </div>
+                <div class="skill-card glass-card">
+                  <div class="skill-header">
+                    <i class="fa-solid fa-network-wired skill-icon"></i>
+                  </div>
+                  <h3>Networking</h3>
+                  <div class="progress-bar">
+                    <div class="fill" style="width: 90%"></div>
+                  </div>
+                </div>
+                <div class="skill-card glass-card">
+                  <div class="skill-header">
+                    <i class="fas fa-server skill-icon"></i>
+                  </div>
+                  <h3>FastAPI</h3>
+                  <div class="progress-bar">
+                    <div class="fill" style="width: 80%"></div>
+                  </div>
+                </div>
               </div>
               <div class="skill-group">
-                <div class="skill-card glass-card"><div class="skill-header"><i class="fab fa-html5 skill-icon"></i><span class="percent">90%</span></div><h3>HTML</h3><div class="progress-bar"><div class="fill" style="width: 90%"></div></div></div>
-                <div class="skill-card glass-card"><div class="skill-header"><i class="fab fa-css3-alt skill-icon"></i><span class="percent">85%</span></div><h3>CSS</h3><div class="progress-bar"><div class="fill" style="width: 85%"></div></div></div>
-                <div class="skill-card glass-card"><div class="skill-header"><i class="fab fa-js skill-icon"></i><span class="percent">60%</span></div><h3>JavaScript</h3><div class="progress-bar"><div class="fill" style="width: 60%"></div></div></div>
-                <div class="skill-card glass-card"><div class="skill-header"><i class="fab fa-python skill-icon"></i><span class="percent">70%</span></div><h3>Python</h3><div class="progress-bar"><div class="fill" style="width: 70%"></div></div></div>
-                <div class="skill-card glass-card"><div class="skill-header"><i class="fa-brands fa-java skill-icon"></i><span class="percent">50%</span></div><h3>Java</h3><div class="progress-bar"><div class="fill" style="width: 50%"></div></div></div>
-                <div class="skill-card glass-card"><div class="skill-header"><i class="fa-solid fa-network-wired skill-icon"></i><span class="percent">90%</span></div><h3>Networking</h3><div class="progress-bar"><div class="fill" style="width: 90%"></div></div></div>
-                <div class="skill-card glass-card"><div class="skill-header"><i class="fas fa-server skill-icon"></i><span class="percent">80%</span></div><h3>FastAPI</h3><div class="progress-bar"><div class="fill" style="width: 80%"></div></div></div>
+                <div class="skill-card glass-card">
+                  <div class="skill-header">
+                    <i class="fab fa-html5 skill-icon"></i>
+                  </div>
+                  <h3>HTML</h3>
+                  <div class="progress-bar">
+                    <div class="fill" style="width: 90%"></div>
+                  </div>
+                </div>
+                <div class="skill-card glass-card">
+                  <div class="skill-header">
+                    <i class="fab fa-css3-alt skill-icon"></i>
+                  </div>
+                  <h3>CSS</h3>
+                  <div class="progress-bar">
+                    <div class="fill" style="width: 85%"></div>
+                  </div>
+                </div>
+                <div class="skill-card glass-card">
+                  <div class="skill-header">
+                    <i class="fab fa-js skill-icon"></i>
+                  </div>
+                  <h3>JavaScript</h3>
+                  <div class="progress-bar">
+                    <div class="fill" style="width: 60%"></div>
+                  </div>
+                </div>
+                <div class="skill-card glass-card">
+                  <div class="skill-header">
+                    <i class="fab fa-python skill-icon"></i>
+                  </div>
+                  <h3>Python</h3>
+                  <div class="progress-bar">
+                    <div class="fill" style="width: 70%"></div>
+                  </div>
+                </div>
+                <div class="skill-card glass-card">
+                  <div class="skill-header">
+                    <i class="fa-brands fa-java skill-icon"></i>
+                  </div>
+                  <h3>Java</h3>
+                  <div class="progress-bar">
+                    <div class="fill" style="width: 50%"></div>
+                  </div>
+                </div>
+                <div class="skill-card glass-card">
+                  <div class="skill-header">
+                    <i class="fa-solid fa-network-wired skill-icon"></i>
+                  </div>
+                  <h3>Networking</h3>
+                  <div class="progress-bar">
+                    <div class="fill" style="width: 90%"></div>
+                  </div>
+                </div>
+                <div class="skill-card glass-card">
+                  <div class="skill-header">
+                    <i class="fas fa-server skill-icon"></i>
+                  </div>
+                  <h3>FastAPI</h3>
+                  <div class="progress-bar">
+                    <div class="fill" style="width: 80%"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -122,30 +363,36 @@
           <div class="glass-card tech-details">
             <h3><i class="fas fa-code"></i> Technical Proficiency</h3>
             <p>
-              I bridge the gap between low-level networking and high-level application development. 
-              My expertise lies in building robust backends with <strong>Python (FastAPI)</strong> and creating 
-              responsive interfaces using <strong>HTML, CSS, and JavaScript</strong>. 
-              Currently working on a Learning Management System (LMS) to apply these skills in real-world scenarios.
+              I bridge the gap between low-level networking and high-level
+              application development. My expertise lies in building robust
+              backends with <strong>Python (FastAPI)</strong> and creating
+              responsive interfaces using
+              <strong>HTML, CSS, and JavaScript</strong>. Currently working on a
+              Learning Management System (LMS) to apply these skills in
+              real-world scenarios.
             </p>
-            
+
             <div class="tech-category">
               <h4>Backend & Database</h4>
               <div class="tags">
-                <span>Python</span><span>Java</span><span>FastAPI</span><span>PostgreSQL</span><span>NeonDB</span>
+                <span>Python</span><span>Java</span><span>FastAPI</span
+                ><span>PostgreSQL</span><span>NeonDB</span>
               </div>
             </div>
 
             <div class="tech-category">
               <h4>Frontend & Design</h4>
               <div class="tags">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Figma</span>
+                <span>HTML</span><span>CSS</span><span>JavaScript</span
+                ><span>Figma</span>
               </div>
             </div>
 
             <div class="tech-category">
               <h4>Infrastructure</h4>
               <div class="tags">
-                <span>Computer Networking</span><span>Git / GitHub</span><span>Vercel</span>
+                <span>Computer Networking</span><span>Git / GitHub</span
+                ><span>Vercel</span>
               </div>
             </div>
           </div>
@@ -153,104 +400,121 @@
       </div>
     </section>
 
-        <section id="projects">
-      <h2 class="section-title hidden-up">Selected <span class="highlight">Work</span></h2>
+    <section id="projects">
+      <h2 class="section-title hidden-up">
+        <span class="highlight">Projects</span>
+      </h2>
       <div class="projects-grid">
         <div class="glass-card project-card hidden-up">
-          <div class="project-img-wrapper" style="margin-bottom: 15px; border-radius: 10px; overflow: hidden;">
-            <img src="./assets/image.png" alt="Portfolio Website" style="width: 100%; height: auto; display: block;">
+          <div class="project-img-wrapper">
+            <img src="./assets/image.png" alt="Portfolio Website" />
           </div>
           <div class="project-content">
             <h3>HomeServ Platform(Static)</h3>
-            <p>A static home services solution connecting customers with professionals using HTML and CSS.</p>
+            <p>
+              A static home services solution connecting customers with
+              professionals using HTML and CSS.
+            </p>
             <div class="tech-stack"><span>HTML</span><span>CSS</span></div>
             <div class="project-links">
-              <a href="https://github.com/Arjuna-Project/HomeServ.git" target="_blank"><i class="fab fa-github"></i> Code</a>
-              <a href="https://arjuna-project.github.io/HomeServ/" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+              <a
+                href="https://github.com/Arjuna-Project/HomeServ.git"
+                target="_blank"
+                ><i class="fab fa-github"></i> Code</a
+              >
+              <a
+                href="https://arjuna-project.github.io/HomeServ/"
+                target="_blank"
+                ><i class="fas fa-external-link-alt"></i> Live</a
+              >
             </div>
           </div>
         </div>
 
-        <div class="glass-card project-card hidden-up" style="transition-delay: 0.2s">
-          <div class="project-img-wrapper" style="margin-bottom: 15px; border-radius: 10px; overflow: hidden;">
-            <img src="./assets/homeserv.png" alt="HomeServ Platform" style="width: 100%; height: auto; display: block;">
+        <div
+          class="glass-card project-card hidden-up"
+          style="transition-delay: 0.2s"
+        >
+          <div class="project-img-wrapper">
+            <img src="./assets/fullstack.png" alt="HomeServ Platform" />
           </div>
           <div class="project-content">
             <h3>HomeServ Platform</h3>
-            <p>A complete home services solution connecting customers with professionals.</p>
-            <div class="tech-stack"><span>HTML</span><span>CSS</span><span>JS</span><span>FastAPI</span><span>Python</span></div>
+            <p>
+              A complete home services solution connecting customers with
+              professionals.
+            </p>
+            <div class="tech-stack">
+              <span>HTML</span><span>CSS</span><span>JS</span
+              ><span>FastAPI</span><span>Python</span>
+            </div>
             <div class="project-links">
-              <a href="https://github.com/Arjuna-Project/HomeServ_Final.git" target="_blank"><i class="fab fa-github"></i> Code</a>
-              <a href="https://home-serv-frontend.vercel.app" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+              <a
+                href="https://github.com/Arjuna-Project/HomeServ-Backend-Upgrade.git"
+                target="_blank"
+                ><i class="fab fa-github"></i> Code</a
+              >
+              <a
+                href="https://home-serv-frontend-upgrade.vercel.app/"
+                target="_blank"
+                ><i class="fas fa-external-link-alt"></i> Live</a
+              >
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section id="certifications">
-      <h2 class="section-title hidden-up">Certifications & <span class="highlight">Internships</span></h2>
-      
-      <div class="cert-grid hidden-up">
-        
-        <div class="glass-card cert-card">
-          <div class="cert-badge internship">Publication</div>
-          <h3>IoT-Driven Water Management</h3>
-          <p class="cert-meta">IJSREM 2025 | Vol 09 Issue 03</p>
-          <p class="cert-desc">
-            Authored a research paper on sustainable IoT solutions for residential areas, 
-            focusing on automated water conservation.
-          </p>
-          <div class="cert-actions">
-            <a href="https://ijsrem.com/download/iot-driven-water-management-solution-for-sustainable-development-in-residential-areas/" target="_blank" class="text-link">Read Online <i class="fas fa-arrow-right"></i></a>
-            <a href="./assets/e- Certificate IJSREM MrArjuna S.png" target="_blank" class="btn-sm">View Cert</a>
+        <div
+          class="glass-card project-card hidden-up"
+          style="transition-delay: 0.4s"
+        >
+          <div class="project-img-wrapper">
+            <img src="./assets/Lms.png" alt="FSSA LMS" />
+          </div>
+          <div class="project-content">
+            <h3>FSSA LMS Platform</h3>
+            <p>
+              A Learning Management System supporting structured courses,
+              skill-based learning, and student progress tracking.
+            </p>
+            <div class="tech-stack">
+              <span>HTML</span><span>CSS</span><span>JS</span
+              ><span>FastAPI</span><span>Python</span><span>PostgreSQL</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/anishaf92/fssa-lms.git"
+                target="_blank"
+                ><i class="fab fa-github"></i> Code</a
+              >
+            </div>
           </div>
         </div>
-
-        <div class="glass-card cert-card" style="transition-delay: 0.1s">
-          <div class="cert-badge internship">Internship</div>
-          <h3>Machine Learning Intern</h3>
-          <p class="cert-meta">Brainery Spot Tech | May - June 2024</p>
-          <p class="cert-desc">
-            Learned fundamental machine learning concepts, data understanding, algorithms, and practical model workflow.
-          </p>
-          <div class="cert-actions">
-            <a href="./assets/internship_1.pdf" class="btn-sm">View Certificate</a>
-          </div>
-        </div>
-
-        <div class="glass-card cert-card" style="transition-delay: 0.2s">
-          <div class="cert-badge internship">Internship</div>
-          <h3>IT Facility Management</h3>
-          <p class="cert-meta">GreenTech Megawatt | May 2024</p>
-          <p class="cert-desc">
-            Gained hands-on experience in IT facility management, support operations, teamwork, and professional discipline.
-          </p>
-          <div class="cert-actions">
-            <a href="./assets/internship_2.pdf" class="btn-sm">View Certificate</a>
-          </div>
-        </div>
-
       </div>
     </section>
 
     <section id="contact">
       <div class="command-center hidden-up">
-        
         <div class="command-left">
           <div class="status-badge">
             <span class="pulsing-dot"></span> Available for Hire
           </div>
-          <h2>Let's Build <br><span class="highlight">The Future</span></h2>
-          <p>Have an idea or just want to chat about tech? My inbox is always open.</p>
+          <h2>Let's Build <br /><span class="highlight">The Future</span></h2>
+          <p>
+            Have an idea or just want to chat about tech? My inbox is always
+            open.
+          </p>
           <div class="command-footer">
-            <p>&copy; 2026 Arjuna S. <span class="dim">Chennai, India.</span></p>
+            <p>
+              &copy; 2026 Arjuna S. <span class="dim">Chennai, India.</span>
+            </p>
           </div>
         </div>
 
         <div class="command-right">
           <div class="social-grid">
-            <a href="mailto:mailtosarjuna@gmail.com" class="social-tile email">
+            <a
+              href="/cdn-cgi/l/email-protection#670a060e0b13081406150d12090627000a060e0b4904080a"
+              class="social-tile email"
+            >
               <i class="fas fa-envelope tile-icon"></i>
               <div class="tile-info">
                 <span class="label">Email</span>
@@ -268,7 +532,11 @@
               <i class="fas fa-arrow-right arrow"></i>
             </a>
 
-            <a href="https://github.com/Arjuna-Project" target="_blank" class="social-tile github">
+            <a
+              href="https://github.com/Arjuna-Project"
+              target="_blank"
+              class="social-tile github"
+            >
               <i class="fab fa-github tile-icon"></i>
               <div class="tile-info">
                 <span class="label">GitHub</span>
@@ -277,7 +545,11 @@
               <i class="fas fa-external-link-alt arrow"></i>
             </a>
 
-            <a href="https://www.linkedin.com/in/arjuna-s2007/" target="_blank" class="social-tile linkedin">
+            <a
+              href="https://www.linkedin.com/in/arjuna-s2007/"
+              target="_blank"
+              class="social-tile linkedin"
+            >
               <i class="fab fa-linkedin-in tile-icon"></i>
               <div class="tile-info">
                 <span class="label">LinkedIn</span>
@@ -287,9 +559,66 @@
             </a>
           </div>
         </div>
-
       </div>
     </section>
+
+    <!-- EF SET Modal -->
+    <div
+      id="efset-modal"
+      class="cert-modal-overlay"
+      onclick="this.classList.remove('active')"
+    >
+      <div class="cert-modal-box" onclick="event.stopPropagation()">
+        <button
+          class="cert-modal-close"
+          onclick="
+            document.getElementById('efset-modal').classList.remove('active')
+          "
+        >
+          <i class="fas fa-times"></i>
+        </button>
+        <img src="./assets/EF_set.png" alt="EF SET English Certificate" />
+        <div class="cert-modal-footer">
+          <span
+            >EF SET English Certificate — Arjuna S · B2 Upper Intermediate</span
+          >
+          <a href="./assets/EF_set.png" download class="cert-download-btn"
+            ><i class="fas fa-download"></i> Download</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Certificate Lightbox Modal -->
+    <div
+      id="cert-modal"
+      class="cert-modal-overlay"
+      onclick="this.classList.remove('active')"
+    >
+      <div class="cert-modal-box" onclick="event.stopPropagation()">
+        <button
+          class="cert-modal-close"
+          onclick="
+            document.getElementById('cert-modal').classList.remove('active')
+          "
+        >
+          <i class="fas fa-times"></i>
+        </button>
+        <img
+          src="./assets/e- Certificate IJSREM MrArjuna S.png"
+          alt="IJSREM Certificate of Publication"
+        />
+        <div class="cert-modal-footer">
+          <span>IJSREM Certificate of Publication — Arjuna S</span>
+          <a
+            href="./assets/e- Certificate IJSREM MrArjuna S.png"
+            download
+            class="cert-download-btn"
+            ><i class="fas fa-download"></i> Download</a
+          >
+        </div>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
