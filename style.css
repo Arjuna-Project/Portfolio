@@ -697,10 +697,24 @@ section {
 }
 
 /* --- CERTIFICATIONS & PROJECTS GRID --- */
-.cert-grid,
+/* .cert-grid,
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+} */
+
+/* Keep cert-grid dynamic */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Fix projects-grid layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 
